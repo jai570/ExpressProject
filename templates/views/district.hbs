@@ -11,13 +11,14 @@
 
                 <section class="get-in-touch">
                     <h1 class="title">Check your nearest vaccine center availablity</h1>
-                    <h2 class="checkbypin">check by pin</h2>
+                    <h2 class="checkbypin">check by District Id</h2>
                     <div class="alert alert-primary" role="alert">
                         <small> please refresh before loading new data!</small>
                     </div>
                     <form class="contact-form row">
                         <div class="form-field col-md-6">
-                            <input id="pin" class="input-text js-input" type="number" required placeholder="Pin">
+                            <input id="pin" class="input-text js-input" type="number" required
+                                placeholder="District ID">
 
                         </div>
                         <div class="form-field col-md-6">
@@ -71,7 +72,7 @@
                 if (pin === "" || pin == undefined) {
                     alert("Enter the Pin correctly");
                 }
-                $.get(`https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=${pin}&date=${date}`, (data, status) => {
+                $.get(`https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id=${pin}&date=${date}`, (data, status) => {
                     let res = [];
                     res = data.sessions;
                     if (res.length == 0) {

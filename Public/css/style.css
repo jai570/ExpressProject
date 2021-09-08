@@ -41,19 +41,7 @@ body {
 .navbar-toggler {
   background-color: white;
 }
-.fa-snowflake {
-  transition: all linear;
-  animation: rot 2s linear infinite;
-}
-@keyframes rot {
-  0% {
-    transform: rotate(0deg);
-  }
 
-  100% {
-    transform: rotate(360deg);
-  }
-}
 .leftprt {
   display: flex;
   flex-direction: column;
